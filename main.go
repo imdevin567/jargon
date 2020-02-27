@@ -9,7 +9,7 @@ import "github.com/imdevin567/jargon/cmd"
 var Version, GitCommit string
 
 func main() {
-	if err := cmd.Execute(Version); err != nil {
+	if err := cmd.Execute(Version, GitCommit); err != nil {
 		panic(err)
 	}
 }
