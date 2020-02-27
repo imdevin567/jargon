@@ -1,0 +1,30 @@
+sudo: required
+language: go
+
+go:
+- "1.13"
+
+script:
+- make dist
+
+before_deploy:
+  - ./ci/hashgen.sh
+
+deploy:
+  provider: releases
+  api_key:
+    secure: AqUwZFC+tySaWMS/Uxt0y8TvvNRThpwGXhmSy524tXgNoXE7GgY1eAFq33DrVX6zvPRDQ+whmCWpxU+XQZzeDl8PVYCJSrc0Hf0z9VDJelBkNZcMfYQ1rXsbbQW9BeJ4wC62yq8INFG+sfBwer93FoqEMvXm9PSSNVGJUr1yh1EgXwpJryVPqE8IjGnYkiGNm7GQsA78GaS+uL8Qimk2aqUljKERvwKG6ZDtqm459+F0Hrvqlh/B0BUxIB/5vOwNhEHtpCmWaIreFO4lfNg1Xzn3lJj+7X1+EHDlIDKJMqIXVYDKqWx3jaukE3AoFIJtowrgo2QRjZ8/FNPrIzta5RU8XF8Tu03uGh/Vhu1mlzqEh9LX6uJQfiW2/C4ktZR0hFrQbpITiDFd2V26KO2z/PJrVi7l2qLfp6ybg54Y7ujgZ+fMGIsdNr64FqsgGWGBcK+CPiBexHP6HV2FS9L55uUL5Du4b00f8CgaPEDjEWvLVqwsjGY71NGkcvlIWwS28epIDmoaP7qPHdzMdXy3RBApxCaH60HW5/mzmyemxodDrO4drRIhekoIvJzsmFVFBeSXgwS+1rgoXvj9FDOfxxbukJ6sB5zIQ1clT6Cui8afFAMyvKCu9q0E7ivv30M4eke3hAzdGTAZYPY/iFUHLMILriPw+2jug8+XsnOAdXo=
+  file:
+    - ./bin/jargon
+    - ./bin/jargon-darwin
+    - ./bin/jargon-armhf
+    - ./bin/jargon-arm64
+    - ./bin/jargon.exe
+    - ./bin/jargon.sha256
+    - ./bin/jargon-darwin.sha256
+    - ./bin/jargon-armhf.sha256
+    - ./bin/jargon-arm64.sha256
+    - ./bin/jargon.exe.sha256
+  skip_cleanup: true
+  on:
+    tags: true

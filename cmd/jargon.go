@@ -27,7 +27,7 @@ const jargonASCIILogo = `
 `
 
 // Version ...
-var Version string
+var Version, GitCommit string
 var jargonfile string
 
 var jargonCmd = &cobra.Command{
@@ -76,6 +76,7 @@ func parseBaseCommand(_ *cobra.Command, _ []string) {
 	printLogo()
 
 	fmt.Println("Version:", getVersion())
+	fmt.Println("Git Commit:", GitCommit)
 	os.Exit(0)
 }
 
@@ -85,8 +86,9 @@ func printLogo() {
 }
 
 // Execute ...
-func Execute(version string) error {
+func Execute(version, gitCommit string) error {
 	Version = version
+	GitCommit = gitCommit
 
 	if err := jargonCmd.Execute(); err != nil {
 		return err

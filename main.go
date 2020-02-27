@@ -5,8 +5,8 @@ package main
 
 import "github.com/imdevin567/jargon/cmd"
 
-// Version ...
-var Version string = "1.0.0"
+// These values will be injected into these variables at the build time.
+var Version, GitCommit string
 
 func main() {
 	if err := cmd.Execute(Version); err != nil {
