@@ -1,10 +1,10 @@
 ![Logo][jargon-logo]
 
-[![Build Status](https://travis-ci.org/imdevin567/jargon.svg?branch=master)](https://travis-ci.org/imdevin567/jargon)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
-[![GoDoc](https://godoc.org/github.com/imdevin567/jargon?status.svg)](http://godoc.org/github.com/imdevin567/jargon)
-[![Go Report Card](https://goreportcard.com/badge/github.com/imdevin567/jargon)](https://goreportcard.com/report/github.com/imdevin567/jargon)
-![GitHub release](https://img.shields.io/github/release/imdevin567/jargon.svg)
+[![Build Status](https://img.shields.io/travis/imdevin567/jargon.svg?style=for-the-badge)](https://travis-ci.org/imdevin567/jargon)
+[![License](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
+[![GoDoc](https://img.shields.io/badge/godoc-reference-blue.svg?style=for-the-badge)](http://godoc.org/github.com/imdevin567/jargon)
+[![Go Report Card](https://goreportcard.com/badge/github.com/imdevin567/jargon?style=for-the-badge)](https://goreportcard.com/report/github.com/imdevin567/jargon)
+![GitHub release](https://img.shields.io/github/release/imdevin567/jargon.svg?style=for-the-badge)
 
 > A proxy tool to translate network traffic to different protocols.
 
